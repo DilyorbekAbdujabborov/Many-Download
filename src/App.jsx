@@ -23,11 +23,13 @@ const App = () => {
 
   // Handle URL input and set fetch URL
   const handleLoad = () => {
-    const inputValue = urlInput.current.value.trim();
-    if (inputValue) {
-      setInputUrl(`http://m4788.myxvest.ru/api.php?url=${encodeURIComponent(inputValue)}`);
-    }
-  };
+  const inputValue = urlInput.current.value.trim();
+  if (inputValue) {
+    setInputUrl(`http://m4788.myxvest.ru/api.php?url=${encodeURIComponent(inputValue)}`);
+    urlInput.current.value = '';  // Clear the input field
+  }
+};
+
 
   // Fetch video data when inputUrl changes
   useEffect(() => {
