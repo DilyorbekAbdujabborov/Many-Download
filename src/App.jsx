@@ -51,25 +51,25 @@ const App = () => {
     fetchData();
   }, [inputUrl]);
 
-  // Fetch ads data on component mount
-  useEffect(() => {
-    const fetchAd = async () => {
-      setAdLoading(true);
-      setFetchError(null);
-      try {
-        const response = await fetch('https://manydownload.pythonanywhere.com/ads/?format=json');
-        if (!response.ok) throw new Error('Network response was not ok');
-        const data = await response.json();
-        setAd(data);
-      } catch (error) {
-        console.error("Error fetching ad:", error);
-        setFetchError("Failed to fetch ad. There might be an issue with the advertisement service.");
-      } finally {
-        setAdLoading(false);
-      }
-    };
-    fetchAd();
-  }, []);
+  // // Fetch ads data on component mount
+  // useEffect(() => {
+  //   const fetchAd = async () => {
+  //     setAdLoading(true);
+  //     setFetchError(null);
+  //     try {
+  //       const response = await fetch('https://manydownload.pythonanywhere.com/ads/?format=json');
+  //       if (!response.ok) throw new Error('Network response was not ok');
+  //       const data = await response.json();
+  //       setAd(data);
+  //     } catch (error) {
+  //       console.error("Error fetching ad:", error);
+  //       setFetchError("Failed to fetch ad. There might be an issue with the advertisement service.");
+  //     } finally {
+  //       setAdLoading(false);
+  //     }
+  //   };
+  //   fetchAd();
+  // }, []);
 
   // Determine the highest quality media
   const highestQualityMedia = api.medias ? api.medias.reduce((prev, current) => 
@@ -144,7 +144,7 @@ const App = () => {
             </center>
           )}
         </div>
-        <aside className='advertisement'>
+{/*         <aside className='advertisement'>
           <h3>Advertisement</h3>
           {adLoading ? (
             <p>Loading ad...</p>
@@ -174,7 +174,7 @@ const App = () => {
               <p>Contact us to place your ad. <a href="https://t.me/Manager_Dilyorbek">Telegram</a></p>
             </div>
           )}
-        </aside>
+        </aside> */}
       </main>
       <footer className='app-footer'>
         <p>© 2024 Many Download App. All rights reserved.</p>
