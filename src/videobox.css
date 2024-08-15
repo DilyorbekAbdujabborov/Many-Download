@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.videobox {
+  width: 50%;
+  height: auto;
+  border: 2px solid #083c3d;
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 20px;
+}
+
+.videobox video {
+  height: 200px;
+  /* background-color: #083C3D; */
+  border-radius: 10px;
+}
+.videobox_down {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.videobox_down a {
+  background-color: #083c3d;
+  border: none;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.videobox_down_info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.videobox_down_info h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 426px) {
+  .videobox {
+    width: 90%;
+  }
+  .videobox_down_info {
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  .videobox_down_info h1 {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+  .videobox_down a {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .videobox_down_info h1 {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
+
+/* App.css */
+
+.wrap {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.urlinput {
+  margin-bottom: 20px;
+}
+
+.urlinput input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 120px);
+  box-sizing: border-box;
+}
+
+.urlinput button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.urlinput button:hover {
+  background-color: #0056b3;
+}
+
+.videbox {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.videbox h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.videbox video {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.videbox p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.videbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.videbox a:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  font-size: 18px;
+  font-weight: bold;
+}

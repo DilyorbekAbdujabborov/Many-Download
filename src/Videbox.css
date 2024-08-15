@@ -1,0 +1,29 @@
+/* src/Videbox.css */
+
+.videbox {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.media-container {
+  margin-bottom: 20px;
+}
+
+.media-player {
+  width: 100%;
+  max-width: 800px;
+}
+
+.media-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.media-info {
+  text-align: left;
+}
